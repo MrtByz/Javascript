@@ -65,3 +65,4 @@ console.log("10/3'ü Yukarı Yuvarla: ", Math.ceil(kalan))
 // yakına yuvarlama
 console.log("10/3'ü Yakına Yuvarla: ", Math.round(kalan))
 
+// boolean değerler
