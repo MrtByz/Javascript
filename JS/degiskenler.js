@@ -66,3 +66,4 @@ console.log("10/3'ü Yukarı Yuvarla: ", Math.ceil(kalan))
 console.log("10/3'ü Yakına Yuvarla: ", Math.round(kalan))
 
 // boolean değerler
+// Git dev branch test
