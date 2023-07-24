@@ -66,4 +66,119 @@ console.log("10/3'ü Yukarı Yuvarla: ", Math.ceil(kalan))
 console.log("10/3'ü Yakına Yuvarla: ", Math.round(kalan))
 
 // boolean değerler
-// Git dev branch test
+let isActive = false
+console.log("False olarak tanımlandı ", isActive)
+isActive = true
+console.log("True olarak tanımlandı ", isActive)
+
+Boolean("11") // True
+Boolean("0") // True
+Boolean("") // False
+
+userName = "mrtbyz"
+IsUsername = Boolean(userName)
+console.log("Username var mı? ", IsUsername)
+
+Boolean(0) // False
+Boolean(-0) // False
+Boolean(-0.1) // True
+Boolean(userName.length > 0) // True
+
+// Veri Türünü Öğrenmek
+
+let prize = 111
+let stringPrize = "111"
+let hasPassword = true
+
+console.log(
+    "prize type: ",
+    typeof(prize)
+)
+
+console.log(
+    "prize type #2: ",
+    typeof(stringPrize)
+)
+
+console.log(
+    "hasPassword type: ",
+    typeof(hasPassword)
+)
+
+
+// String verileri int ve floata dönüştürmek
+
+let number1 = "11"
+console.log(
+    "number1: ", parseInt(number1)
+)
+
+console.log(
+    "Floata cast edilmiş number1'ın tipi: ", typeof(parseFloat(number1))
+)
+
+// Number veri tipinden stringe dönüştürmek
+ let digitNumber = 55
+ console.log(
+    "Number: ", digitNumber,
+    " Cast Edilmiş Tipi: ", typeof(digitNumber.toString())
+ )
+
+
+ // Template Literals Kullanımı
+
+let user = "MrtByz"
+const DOMAIN = "jsdersleri.com"
+
+let email = user + "@" + DOMAIN
+
+console.log(
+    "Merhaba ", user,
+    "sitemize hoşgeldin! Mail adresin: ", email 
+)
+
+// Yukarıdaki print için kullanılan yöntem yerine 
+// tek string halinde template literals kullanılarak yazılabilir
+// TEK TIRNAK DEĞİL BACK TICK KULLANILACAK
+
+info = `Merhaba ${user} sitemize hoşgeldin! Mail adresin: ${email}`
+console.log(info)
+
+
+// HTML Dosyasına yazı yazdırmak
+document.body.innerHTML = info;
+
+// Template Literals ile yazalım!!! 
+const kitap = {
+    ad: "Fırtına",
+    yazar: "Shakespeare",
+    tarih: 1610
+  }
+const bookTable =
+    "<table border>"+
+    "<tbody>"+
+    "<tr>"+
+    "<td>"+"Kitap"+"</td>"+
+    "<td>"+kitap.ad+"</td>"+
+    "</tr>"+
+    "<tr>"+
+    "<td>"+"Yazar"+"</td>"+
+    "<td>"+kitap.yazar+"</td>"+
+    "</tr>"+
+    "<tr>"+
+    "<td>"+"Tarih"+"</td>"+
+    "<td>"+kitap.tarih+"</td>"+
+    "</tr>"+
+    "</tbody>"+
+    "</table>"
+
+bookTableLiteral = `
+<table border>
+<tbody>
+<tr><td> Kitap </td><td> ${kitap.ad} </td></tr>
+<tr><td> Yazar </td><td> ${kitap.yazar} </td></tr>
+<tr><td> Tarih </td><td> ${kitap.tarih} </td></tr>
+</tbody>
+</table border>
+`
+document.body.innerHTML = bookTableLiteral
