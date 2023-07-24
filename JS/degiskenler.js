@@ -66,4 +66,20 @@ console.log("10/3'ü Yukarı Yuvarla: ", Math.ceil(kalan))
 console.log("10/3'ü Yakına Yuvarla: ", Math.round(kalan))
 
 // boolean değerler
-// Git dev branch test
+let isActive = false
+console.log("False olarak tanımlandı ", isActive)
+isActive = true
+console.log("True olarak tanımlandı ", isActive)
+
+Boolean("11") // True
+Boolean("0") // True
+Boolean("") // False
+
+userName = "mrtbyz"
+IsUsername = Boolean(userName)
+console.log("Username var mı? ", IsUsername)
+
+Boolean(0) // False
+Boolean(-0) // False
+Boolean(-0.1) // True
+Boolean(userName.length > 0) // True
