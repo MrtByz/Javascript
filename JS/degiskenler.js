@@ -182,3 +182,38 @@ bookTableLiteral = `
 </table border>
 `
 document.body.innerHTML = bookTableLiteral
+
+
+// String Veri Tipi
+
+let stringOrnegi = "Bu bir örnek string";
+
+// Karakter sayısı
+console.log("Örnek Stringdeki karakter sayısı: ", stringOrnegi.length)
+
+// ilk karakter
+console.log("Örnek stringteki ilk karakter: ", stringOrnegi[0])
+
+// büyük harf - küçük harf
+console.log("Örnek string büyük harflerle: ", stringOrnegi.toUpperCase())
+console.log("Örnek string büyük harflerle: ", stringOrnegi.toLowerCase())
+
+// string içinde istenen bilgiyi aratmak -> search
+// aranan şey stringde yoksa -1 döner
+console.log("Örnek stringde ö harfinin yeri", stringOrnegi.search('ö'))
+
+// Stringin belli bir bölümünü alma -> slicing
+console.log("Örnek stringde 5. karakter ve sonrası: ", stringOrnegi.slice(5))
+console.log("Örnek stringde 0-5. karakter arası: ", stringOrnegi.slice(0,5))
+
+// bilgiyi değiştirme -> replace
+console.log("Örnek stringde örnek->değişmiş: ", 
+stringOrnegi.replace("örnek", "değişmiş"))
+
+// istediğim bilgi var mı? -> includes
+console.log("Stringde Murat var mı?: ", stringOrnegi.includes("Murat"))
+
+// istediğim bilgiyle başladı mı bitti mi -> startsWith, endsWith
+console.log("String murat ile mi başlıyor?: ", stringOrnegi.startsWith("Murat"))
+console.log("String murat ile mi bitiyor?: ", stringOrnegi.endsWith("Murat"))
+
