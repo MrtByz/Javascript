@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body>
     <!-- INPUT TURLERI -->
-    <input type="text" value="Input"> <!--Input(giriş) elementi text tipinde belirlenir. Yani klasik textbox kullanımı olarak ifade etsek yanlış olmaz.-->
-    <input type="password" value="sifre"> <!--Şifre tipinde veri girişi için kullanılır. Textbox’a girilen ifadeler “*” şeklinde gizlenerek gösterilir.-->
-    <input type="radio"> <!-- Radio button tipinde, istenilen verileri seçmek için geliştirilen giriş yöntemidir. -->
-    <input type="checkbox"> <!--Checkbox tipinde, onay gerektiren durumlarda kullanılması için geliştirilen giriş yöntemidir.-->
-    <input type="button" value="Buton"> <!--Klasik buton oluşturur.-->
-    <input type="submit"> <!--Form içerisindeki elementlere girilen verileri, gönderme işlemini yapar. 
+    <!--<input type="text" value="Input">-->
+    <!--Input(giriş) elementi text tipinde belirlenir. Yani klasik textbox kullanımı olarak ifade etsek yanlış olmaz.-->
+    <!--<input type="password" value="sifre">-->
+    <!--Şifre tipinde veri girişi için kullanılır. Textbox’a girilen ifadeler “*” şeklinde gizlenerek gösterilir.-->
+    <!--<input type="radio">-->
+    <!-- Radio button tipinde, istenilen verileri seçmek için geliştirilen giriş yöntemidir. -->
+    <!--<input type="checkbox">-->
+    <!--Checkbox tipinde, onay gerektiren durumlarda kullanılması için geliştirilen giriş yöntemidir.-->
+    <!--<input type="button" value="Buton">--> <!--Klasik buton oluşturur.-->
+    <!--<input type="submit">--> <!--Form içerisindeki elementlere girilen verileri, gönderme işlemini yapar. 
                             action ile açılacak yeni sayfaya veya mevcut sayfanın kendisine, 
                             get veya post metoduna göre değişecek şekilde veri gönderme işlevini gerçekleştirir.-->
-    <input type="reset"> <!--Buton tipinde bir nesne oluşturur. Form içerisindeki elementlere veriler girilmiş halde iken 
+    <!--<input type="reset">--> <!--Buton tipinde bir nesne oluşturur. Form içerisindeki elementlere veriler girilmiş halde iken 
                             reset’e tıklandığında görünen tüm verileri temizler ve elementleri ilk haline getirir.-->
-    <input type="color"> <!--Renk çeşitlerini tasarımcıya sunan ve seçimini sağlayan giriş tipidir -->
-    <input type="date"> <!--Tarayıcıda tarih gösterimini sağlayan tiptir. gg.aa.yyyy varsayılan formatında görünür.-->
-    <input type="email" value="deneme@gmail.com"> <!--Sadece e-mail girişi yapabilmek için kullanılır.-->
-    <input type="number" value=1> <!--Sadece sayı girişi yapabilmek için kullanılır.-->
-    <input type="range"> <!--Bir aralık belirtmemiz gerektiğinde, bu giriş tipini kullanmamız gerekmektedir. -->
-    <input type="search" value="search"> <!--Arama yapmamızı sağlayan giriş tipidir. -->
-    <input type="time"> <!--Tarayıcıda saat gösterimini sağlayan tiptir. hh.mm varsayılan formatında görünür.  -->
+    <!--<input type="color">--> <!--Renk çeşitlerini tasarımcıya sunan ve seçimini sağlayan giriş tipidir -->
+    <!--<input type="date">-->
+    <!--Tarayıcıda tarih gösterimini sağlayan tiptir. gg.aa.yyyy varsayılan formatında görünür.-->
+    <!--<input type="email" value="deneme@gmail.com">--> <!--Sadece e-mail girişi yapabilmek için kullanılır.-->
+    <!--<input type="number" value=1>--> <!--Sadece sayı girişi yapabilmek için kullanılır.-->
+    <!--<input type="range">--> <!--Bir aralık belirtmemiz gerektiğinde, bu giriş tipini kullanmamız gerekmektedir. -->
+    <!--<input type="search" value="search">--> <!--Arama yapmamızı sağlayan giriş tipidir. -->
+    <!--<input type="time">-->
+    <!--Tarayıcıda saat gösterimini sağlayan tiptir. hh.mm varsayılan formatında görünür.  -->
     <br>
     <div class="container">
         <div class="row">
             <div class="col-sm-8 offset-sm-2">
                 <form id="userForm"><!--Default method get ama post daha güvenli olabilir-->
-                    <input type="number" name="score" id="score">
-                    <button type="submit" class="btn btn-success">
-                        Gönder
-                    </button>
+                    <div class="mb-3">
+                        <label class="form-label" for="name"> Username </label>
+                        <input class="form-control" type="text" name="name" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="score"> Score </label>
+                        <input class="form-control" type="number" name="score" id="score">
+                    </div>
+                    <div class="mb-3">
+                        <button type="reset" class="btn btn-danger"> Sıfırla </button>
+                        <button type="submit" class="btn btn-success"> Gönder </button>
+                    </div>
                 </form>
+            </div>
+            <div class="col-sm-8 offset-sm-2 mt-4">
+                <ul class="list-group" id="userList">
+                    <!--<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Murat
+                        <span class="badge bg-primary rounded-pill">100</span>
+                    </li>-->
+                </ul>
             </div>
         </div>
     </div>
     <script src="JS/form.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
