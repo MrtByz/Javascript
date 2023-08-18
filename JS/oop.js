@@ -191,7 +191,7 @@ const toplama2 = ({ sayi1, sayi2, ...args }) => {
     return sonuc;
    }
 
-toplama(sayilar2);
+toplama2(sayilar2);
 
 
 
