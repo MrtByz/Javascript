@@ -115,25 +115,83 @@ let person = {
   
   document.getElementById("demo").innerHTML = JSON.stringify(person); // Bu objenizi bir stringe çevirip demo idsine basacaktır.
   
-  let stringObject = JSON.stringify(person);
+let stringObject = JSON.stringify(person);
   
-  let newPerson = JSON.parse(stringObject); 
-  // parse methodu da stringtify methodunun tersi olarak çalışır ve stringi objeye çevirir
+// parse methodu da stringtify methodunun tersi olarak çalışır ve stringi objeye çevirir
+let newPerson = JSON.parse(stringObject); 
+
+// Nesnelere metot eklemek
+
+var person2 = {
+	name: 'Murat',
+	surname: 'Beyaz',
+	age: 27,
+	city: 'Istanbul',
+	introduce: function () {
+		console.log(`My name is ${this.name} ${this.surname}, I'm ${this.age} yo.`);
+	},
+};
+
+console.log(person2.introduce())
+
+person2.myCity = function () {
+	console.log(`I live in ${this.city}`);
+};
+person2.myCity();
+
+// JS Object Constructor
+function Insan(isim,yas) {
+    this.isim = isim;
+    this.yas = yas;
+  }
+
+const neva = new Insan("neva",0);
+console.log(neva.yas);
+
+// Destructuring
+
+const foo = { a: 123, b: true }
+const {a,b} = foo;
+
+
+// sayi1 ve sayi2 parameterelerinden biri verilmezse NaN döner bu nedenle parametrelere default değer atanmalıdır.
+// eğer sayi2 örneğin hiç verilmezse "cikarma = ( { sayi1})" gibi reference error verir
+const cikarma = ( { sayi1, sayi2 } ) => { 
+    // Bu satira dikkat
+    return sayi1 - sayi2;
+}
+const sayilar = {
+    sayi2: 3,
+    sayi1: 5
+}
+cikarma(sayilar);  // 2 döner
 
 
 
+// Rest Operator
+const toplama = ({ sayi1, sayi2 }) => { 
+    // dikkat sadece 2 sayireturn sayi1 + sayi2 + sayi3 + sayi4 + sayi5;
+    return sayi1 + sayi2
+    }
+const sayilar2 = {
+    sayi1: 8,
+    sayi2: 4,
+    sayi3: 7,
+    sayi4: 9,
+    sayi5: 11
+}
+toplama(sayilar2); 
 
 
+const toplama2 = ({ sayi1, sayi2, ...args }) => {
+    let sonuc = sayi1 + sayi2;
+    for (let sayi in args){
+     sonuc += args[sayi];
+    }
+    return sonuc;
+   }
 
-
-
-
-
-
-
-
-
-
+toplama(sayilar2);
 
 
 
